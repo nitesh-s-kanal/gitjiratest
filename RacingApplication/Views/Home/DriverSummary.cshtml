@@ -1,0 +1,58 @@
+﻿@model IEnumerable<RacingApplication.Models.RacingSummary>
+
+@{
+    ViewBag.Title = "Driver Summary";
+}
+
+
+<div>
+    <div style="width:100%; text-align:center;margin-top:5%"><h1>Driver Summary</h1></div>
+    
+    <div style="float:left; width:100%; overflow-y: auto; height: 400px;">
+        <table width="100%" border="1" style="margin-top: 30px !important">
+            <tr>
+                <th style="text-align:center !important">
+                    @Html.DisplayNameFor(model => model.DriverId)
+                </th>
+                <th style="text-align:center !important">
+                    @Html.DisplayNameFor(model => model.DriverName)
+                </th>
+                <th style="text-align:center !important">
+                    @Html.DisplayNameFor(model => model.DriverCountry)
+                </th>
+
+                <th style="text-align:center !important">
+                    @Html.DisplayNameFor(model => model.RacesWon)
+                </th>
+                <th style="text-align:center !important">
+                    @Html.DisplayNameFor(model => model.RacesLost)
+                </th>
+
+            </tr>
+
+            @foreach (var item in Model)
+            {
+
+                <tr style="text-align:center">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DriverId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DriverName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DriverCountry)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RacesWon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RacesLost)
+                    </td>
+
+                </tr>
+            }
+        </table>
+        </div>
+</div>

@@ -1,0 +1,191 @@
+﻿@model IEnumerable<RacingApplication.Models.RacingSummary>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+    <div>
+        <div style="width:100%; text-align:center;margin-top:5%"><h1>Participants Summary</h1></div>
+        <div >
+            <table width="100%" border="1" style="margin-top: 30px !important;float:left; width:100%; overflow-y: auto; height: 200px;">
+                <tr>
+                    <th style="        text-align: center !important
+">
+                        @Html.DisplayNameFor(model => model.DriverId)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.DriverName)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.DriverCountry)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Category)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Car)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.TrackId)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.CityName)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.TopSpeed)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.CompletionTime)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.RaceDate)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Rank)
+                    </th>
+
+                </tr>
+                @foreach (var item in Model)
+                {
+
+                    <tr style="text-align:center">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DriverId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DriverName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DriverCountry)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Car)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TrackId)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CityName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TopSpeed)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CompletionTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RaceDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rank)
+                        </td>
+
+                    </tr>
+                }
+            </table>
+
+        </div>
+
+        <div style="width:100%; text-align:center;margin-top:30%"><h1>Top Drivers Information</h1></div>
+        <div style="float:left; width:100%; overflow-y: auto; height: 200px;">
+            <table width="100%" border="1" style="margin-top: 10px !important">
+                <tr>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.DriverId)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.DriverName)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.DriverCountry)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Category)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Car)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.TrackId)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.CityName)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.TopSpeed)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.CompletionTime)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.RaceDate)
+                    </th>
+                    <th style="text-align:center !important">
+                        @Html.DisplayNameFor(model => model.Rank)
+                    </th>
+
+                </tr>
+                @foreach (var item in Model)
+                {
+                    if (item.Rank == 1)
+                    {
+                        <tr style="text-align:center">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DriverId)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DriverName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DriverCountry)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Category)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Car)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TrackId)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CityName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TopSpeed)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CompletionTime)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.RaceDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Rank)
+                            </td>
+
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+        
+    </div>
