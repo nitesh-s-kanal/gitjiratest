@@ -13,7 +13,7 @@ namespace RacingApplication.Controllers
             RacingContext raceContext = new RacingContext();
 
             //Retrive from DB
-            //new changes
+            //new changes test 1
             List<RacingSummary> racingDetails = (from driver in raceContext.Driver
                                                  join racing in raceContext.Racing
                                                  on driver.DriverId equals racing.DriverId
